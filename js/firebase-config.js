@@ -10,12 +10,10 @@ export const firebaseConfig = {
   appId: "1:149177527512:web:ac0184b0d4339788f3bbad",
 };
 
-// Same EmailJS account as the candidate site — this template is the one
-// used for the "candidate passed all 5 days" completion report. Sending it
-// is an admin-approved action from this site's Candidates tab (not
-// automatic), so this is the only place that actually calls emailjs.send()
-// with it. Not a secret — same trade-off as the Firebase config above.
-export const EMAILJS_SERVICE_ID = "service_4pvav1n";
-export const EMAILJS_COMPLETION_TEMPLATE_ID = "template_69jr97q";
-export const EMAILJS_PUBLIC_KEY = "qEx9SNi8cHxY8jjxg";
+// Same Apps Script mailer as the candidate site (../coach-sql/mailer/) —
+// used both for the marking-sheet email (candidate site) and, from this
+// admin dashboard's Candidates tab, the admin-approved "completion report"
+// send once a candidate has passed all 5 days.
+export const MAILER_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+export const MAILER_SECRET = "PASTE_YOUR_SHARED_SECRET_HERE";
 export const MARKING_EMAIL_TO = "posinsideragent@gmail.com";
